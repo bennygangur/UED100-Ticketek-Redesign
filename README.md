@@ -6,9 +6,9 @@ The aim was to make finding events and selecting tickets easier, particularly fo
 
 ## Running the Website
 
-1. Download the project files and extract the ZIP folder.
+1. Download the project ZIP and extract the files.
 2. Open the folder in Visual Studio Code.
-3. Open `index.html` in your browser or use the Live Server extension.
+3. Open `index.html` in a browser or use the Live Server extension.
 
 ## Features
 
@@ -22,13 +22,13 @@ The aim was to make finding events and selecting tickets easier, particularly fo
 
 ## Technologies Used
 
-**HTML:** Used to structure the website and its forms.
+**HTML:** Structures the website and forms.
 
-**CSS:** Used for the layout, colours, buttons and responsive design.
+**CSS:** Handles the layout, colours, buttons and responsive design.
 
-**JavaScript:** Used for navigation, searching, ticket selection, booking summaries and form validation.
+**JavaScript:** Handles navigation, searching, seating selection, booking summaries and form validation.
 
-The website uses local SVG illustrations for its event imagery.
+The `assets` folder includes event photographs from the accompanying Figma design.
 
 ## Project Information
 
@@ -36,8 +36,8 @@ This is a university prototype, not an operational Ticketek website. Ticket avai
 
 ## Figma Design
 
-[View my original Figma prototype](https://www.figma.com/design/go5nzI5KxaRqm29dR52hwK/UED100-Assessment-2---Ticketek-Redesign)
+[View my Figma prototype](https://www.figma.com/design/go5nzI5KxaRqm29dR52hwK/UED100-Assessment-2---Ticketek-Redesign)
 
 ## Testing
 
-The `TESTING_CHECKLIST.md` file contains the tests used to review the website's functionality and responsiveness.
+`TESTING_CHECKLIST.md` lists the usability and technical tests to check. Only mark tests complete once they have been carried out.
