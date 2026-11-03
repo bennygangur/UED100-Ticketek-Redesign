@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Student concept prototype of a clearer event ticket booking journey.">
+  <title>TICKETEK TIXMATES | Student UX Redesign</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="TICKETEK TIXMATES, home">TICKETEK TIXMATES</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-controls="siteNav" aria-expanded="false">☰ <span>Menu</span></button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <a href="#home" data-nav="home">Events</a>
+        <a href="#home" data-filter-link="sport">Sports</a>
+        <a href="#home" data-filter-link="concert">Concerts</a>
+        <a href="#ballot" data-nav="ballot">Ballot</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <!-- Home: prominent search and three event cards reproduce the Figma journey. -->
+    <section class="view" id="view-home" data-view="home" aria-labelledby="homeHeading">
+      <div class="hero">
+        <div class="container hero-content">
+          <p class="eyebrow">EVENTS • SPORT • LIVE ENTERTAINMENT</p>
+          <h1 id="homeHeading" class="display">Find your next experience</h1>
+          <p class="hero-subtitle">Discover sport, concerts and live entertainment, all in one place.</p>
+          <form class="search-form" id="searchForm" role="search">
+            <label for="eventSearch">Search events, artists or venues</label>
+            <div class="search-row">
+              <input id="eventSearch" type="search" autocomplete="off" placeholder="Search events, artists or venues...">
+              <button type="submit" class="btn btn-primary">Search events</button>
+            </div>
+          </form>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#featured">Explore events</a>
+            <a class="btn btn-secondary" href="#verify">Verify a ticket</a>
+          </div>
+        </div>
+      </div>
+      <div id="featured" class="featured">
+        <div class="container">
+          <div class="section-heading"><div><p class="eyebrow">DISCOVER</p><h2>Featured Events</h2></div><p class="muted">Select an event to explore its details.</p></div>
+          <p id="searchStatus" class="sr-status" role="status" aria-live="polite"></p>
+          <div class="event-grid" id="eventGrid">
+            <a class="event-card" href="#event" data-search="afl grand final sport mcg football melbourne" data-kind="sport"><img src="assets/afl-stadium.svg" alt="Illustration of a packed Australian football stadium" width="800" height="460" loading="lazy"><div class="event-info"><span class="tag">AFL</span><h3>AFL Grand Final</h3><p>Melbourne Cricket Ground</p><span class="text-link">View event details <span aria-hidden="true">→</span></span></div></a>
+            <a class="event-card" href="#cricket" data-search="150th anniversary test cricket australia england mcg sport" data-kind="sport"><img src="assets/cricket.svg" alt="Illustration of a cricket match" width="800" height="460" loading="lazy"><div class="event-info"><span class="tag">CRICKET</span><h3>150th Anniversary Test</h3><p>Melbourne Cricket Ground</p><span class="text-link">View event details <span aria-hidden="true">→</span></span></div></a>
+            <a class="event-card" href="#concert" data-search="live concerts music tour concert entertainment" data-kind="concert"><img src="assets/concert.svg" alt="Illustration of a live concert crowd and stage" width="800" height="460" loading="lazy"><div class="event-info"><span class="tag">MUSIC</span><h3>Live Concerts</h3><p>Browse live entertainment</p><span class="text-link">Explore concerts <span aria-hidden="true">→</span></span></div></a>
+          </div>
+          <p id="noResults" class="empty-note" hidden>No events match that search. Try a different keyword.</p>
+          <div class="info-banner"><strong>Student prototype:</strong> Event availability, categories and interface behaviours are examples only. This website is not affiliated with Ticketek and does not process sales.</div>
+        </div>
+      </div>
+    </section>
+    <section class="view" id="view-event" data-view="event" aria-labelledby="eventHeading" hidden>
+      <div class="container page-content">
+        <a class="back-link" href="#home">← All events</a>
+        <p class="eyebrow">SPORT • FEATURED EVENT</p>
+        <h1 id="eventHeading">2027 Toyota AFL Grand Final</h1>
+        <div class="event-hero-image"><img src="assets/afl-stadium.svg" alt="Illustration of an AFL match at a major stadium" width="800" height="460"></div>
+        <div class="event-bottom"><div><h2>Melbourne Cricket Ground (MCG)</h2><p class="muted">Event date to be confirmed. Information shown is illustrative.</p></div><a href="#tickets" class="btn btn-primary wide">Find tickets</a></div>
+      </div>
+    </section>
+    <section class="view" id="view-tickets" data-view="tickets" aria-labelledby="ticketsHeading" hidden>
+      <div class="container page-content"><a class="back-link" href="#event">← Event details</a><h1 id="ticketsHeading">2027 Toyota AFL Grand Final</h1>
+        <div class="panel ticket-panel"><h2>Select Your Tickets</h2>
+          <div class="ticket-option" aria-label="General Admission: sold out in this demo"><div><h3>General Admission</h3><p>Unreserved seating / Standing room</p></div><div class="ticket-right"><span class="availability unavailable">Allocation exhausted (demo)</span><button class="btn btn-disabled" disabled>Sold out</button></div></div>
+          <div class="ticket-option"><div><h3>Reserved Seating</h3><p>Select your preferred seating category</p></div><div class="ticket-right"><span class="availability limited">Example categories</span><a href="#seating" class="btn btn-primary">Select seats</a></div></div>
+          <div class="ticket-option"><div><h3>Hospitality Packages</h3><p>Premium seating and hospitality options</p></div><div class="ticket-right"><span class="availability limited">Information only</span><a href="#hospitality" class="btn btn-primary">View packages</a></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="view" id="view-seating" data-view="seating" aria-labelledby="seatingHeading" hidden>
+      <div class="container page-content"><a class="back-link" href="#tickets">← Ticket types</a><h1 id="seatingHeading">2027 Toyota AFL Grand Final</h1>
+        <div class="seating-grid"><div class="stadium-map"><img src="assets/mcg-aerial.svg" alt="Illustrative overhead layout of the MCG seating bowl, not an official seating map" width="900" height="740"><p>Illustrative stadium overview. Exact sections and inventory are not shown.</p></div>
+          <div class="category-panel"><h2>Choose your seating category</h2><p class="muted">Select one option to continue.</p><div id="categoryList" class="category-list" role="group" aria-label="Reserved seating categories"></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="view" id="view-summary" data-view="summary" aria-labelledby="summaryHeading" hidden>
+      <div class="container page-content"><a class="back-link" href="#seating">← Change category</a><h1 id="summaryHeading">Booking Summary</h1><p class="lead">2027 Toyota AFL Grand Final</p><p class="muted">Melbourne Cricket Ground (MCG) • Date to be confirmed</p>
+        <div class="summary-grid"><div class="panel"><p class="eyebrow">YOUR SELECTION</p><h2>Reserved Seating</h2><div class="summary-category" id="summaryCategory" aria-live="polite">Category 1 — Level 2 / 2A</div><label for="ticketQuantity">Number of tickets</label><select id="ticketQuantity"><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option><option value="4">4 tickets</option></select><p class="muted">This is a simulation. Availability and prices are not retrieved from Ticketek.</p></div>
+        <aside class="panel order-review"><h2>Order review</h2><dl><div><dt>Category</dt><dd id="reviewCategory">Category 1</dd></div><div><dt>Ticket quantity</dt><dd id="reviewQuantity">1</dd></div><div><dt>Ticket price</dt><dd>Not available in demo</dd></div></dl><p class="notice">No payment is requested or processed.</p></aside></div>
+        <div class="action-row"><a href="#seating" class="btn btn-secondary">Back to seating</a><button id="confirmSelection" class="btn btn-primary" type="button">Confirm selection (demo)</button></div>
+      </div>
+    </section>
+    <section class="view" id="view-confirmed" data-view="confirmed" aria-labelledby="confirmedHeading" hidden>
+      <div class="container page-content"><div class="result-panel"><span class="result-icon" aria-hidden="true">✓</span><h1 id="confirmedHeading">Selection confirmed in this demo</h1><p id="confirmationDescription" class="lead"></p><p>No seats have been reserved or purchased. This is the end of the demonstration booking journey.</p><div class="action-row"><a href="#seating" class="btn btn-secondary">Change selection</a><a href="#home" class="btn btn-primary">Return home</a></div></div></div>
+    </section>
+    <section class="view" id="view-verify" data-view="verify" aria-labelledby="verifyHeading" hidden>
+      <div class="container page-content"><a class="back-link" href="#home">← Home</a><h1 id="verifyHeading">Verify a ticket</h1><p class="lead">A demonstration of a safer ticket checking experience</p>
+        <div class="two-col"><form id="verificationForm" class="panel form-panel"><label for="verifyEvent">Event name</label><input type="text" id="verifyEvent" name="event" maxlength="100" placeholder="e.g. AFL Grand Final" required><label for="verifyReference">Ticket reference</label><input type="text" id="verifyReference" name="reference" minlength="4" maxlength="80" placeholder="Enter reference (demo only)" required><label for="verifyFile">Optional example ticket image or PDF</label><input type="file" id="verifyFile" name="ticket" accept="image/png,image/jpeg,application/pdf"><p class="muted small">Files remain in your browser and are not uploaded or analysed. Maximum 10 MB.</p><p id="verifyError" class="form-error" role="alert" hidden></p><button class="btn btn-primary full" type="submit">Run demo check</button></form>
+          <aside class="panel safety-panel"><h2>Important</h2><p>This is a simulated check. It does not connect to Ticketek or any official ticket database and cannot verify ticket authenticity.</p><p>Even a genuine ticket can be copied or sold more than once. A genuine result cannot guarantee entry or seller honesty.</p><p>Never enter real personal details or passwords into this prototype.</p></aside></div>
+      </div>
+    </section>
+    <section class="view" id="view-verify-result" data-view="verify-result" aria-labelledby="verifyResultHeading" hidden>
+      <div class="container page-content"><h1 id="verifyResultHeading">Ticket check result</h1><div class="result-panel"><p class="eyebrow">DEMONSTRATION COMPLETE</p><h2>No real verification has taken place</h2><p>The example details you entered were used only to demonstrate the form flow. No ticket file was uploaded or authenticated.</p><p><strong>Safety reminder:</strong> A genuine ticket may still be duplicated or resold. Always use official resale or transfer channels where available.</p><a href="#verify" class="btn btn-primary">Check another ticket</a></div></div>
+    </section>
+    <section class="view" id="view-ballot" data-view="ballot" aria-labelledby="ballotHeading" hidden><div class="container page-content"><a class="back-link" href="#home">← Home</a><p class="eyebrow">HIGH DEMAND EVENTS</p><h1 id="ballotHeading">Ballot and queue information</h1><p class="lead">Clearer explanations help customers understand what happens before, during and after high-demand sales.</p><div class="steps"><article class="panel step"><span class="step-num">01</span><h2>Before the sale</h2><p>Check eligibility, ballot opening dates and the difference between registration and a confirmed ticket.</p></article><article class="panel step"><span class="step-num">02</span><h2>During the sale</h2><p>See a clearly labelled queue or ballot status. A queue position does not guarantee inventory.</p></article><article class="panel step"><span class="step-num">03</span><h2>After the sale</h2><p>See the outcome, next steps and official contact options in plain language.</p></article></div><div class="info-banner">Educational mockup only. This site does not run ballots, issue queue positions or provide live inventory.</div></div></section>
+    <section class="view" id="view-hospitality" data-view="hospitality" aria-labelledby="hospitalityHeading" hidden><div class="container page-content"><a class="back-link" href="#tickets">← Ticket types</a><h1 id="hospitalityHeading">Hospitality Packages</h1><div class="panel simple-page"><h2>Premium event experiences</h2><p>Premium seating and hospitality options would be displayed here in a full ticketing website.</p><p>This demonstration does not list or sell actual hospitality inventory.</p><a href="#tickets" class="btn btn-primary">Back to ticket types</a></div></div></section>
+    <section class="view" id="view-cricket" data-view="cricket" aria-labelledby="cricketHeading" hidden><div class="container page-content"><a class="back-link" href="#home">← Home</a><h1 id="cricketHeading">150th Anniversary Test</h1><div class="event-hero-image"><img src="assets/cricket.svg" alt="Illustration of a cricket match" width="800" height="460"></div><div class="panel simple-page"><h2>Event discovery preview</h2><p>Information and inventory would appear here. This prototype focuses on the AFL Grand Final booking journey.</p><a class="btn btn-primary" href="#home">Return to events</a></div></div></section>
+    <section class="view" id="view-concert" data-view="concert" aria-labelledby="concertHeading" hidden><div class="container page-content"><a class="back-link" href="#home">← Home</a><h1 id="concertHeading">Live Concerts</h1><div class="event-hero-image"><img src="assets/concert.svg" alt="Illustration of concert stage" width="800" height="460"></div><div class="panel simple-page"><h2>Explore music events</h2><p>This preview demonstrates the event discovery path. Real booking availability is not provided.</p><a class="btn btn-primary" href="#home">Return to events</a></div></div></section>
+    <section class="view" id="view-contact" data-view="contact" aria-labelledby="contactHeading" hidden><div class="container page-content"><a class="back-link" href="#home">← Home</a><h1 id="contactHeading">Contact us</h1><p class="lead">Example interface for a customer support enquiry.</p><form class="panel form-panel contact-form" id="contactForm"><label for="contactName">Name</label><input id="contactName" name="name" required maxlength="80"><label for="contactEmail">Email</label><input id="contactEmail" type="email" name="email" required maxlength="120"><label for="contactMessage">Message</label><textarea id="contactMessage" name="message" required minlength="10" maxlength="1000" rows="5"></textarea><button class="btn btn-primary" type="submit">Preview enquiry</button><p id="contactFeedback" class="notice" role="status" aria-live="polite">Demo only: your enquiry will not be sent.</p></form></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p><strong>TICKETEK TIXMATES</strong> • UED100 student redesign concept</p><p>Not affiliated with or endorsed by Ticketek. No real ticket sales, bookings or checks.</p><a href="#contact">Contact prototype</a></div></footer>
+</body>
+</html>
