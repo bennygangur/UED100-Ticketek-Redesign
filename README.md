@@ -1,59 +1,43 @@
-# UED100 Assessment 2 — Ticketek UI Redesign
+# UED100 Assessment 2 | Ticketek UI Redesign
 
-A responsive, interactive **student concept prototype** based on the accompanying Figma mockups. This is a simulated interface only, not an operational Ticketek website. There are no payments, live tickets, reservations, balloting or real verification services.
+This project is a redesign of the Ticketek website for my UED100 User Experience Design assessment at Torrens University.
 
-## Run locally in Visual Studio Code
+The aim was to make finding events and selecting tickets easier, particularly for popular events where ticket availability and booking processes can be confusing.
 
-1. Unzip the assessment folder and open it in **Visual Studio Code**.
-2. Open `index.html` in a browser, or use the VS Code Live Server extension and select **Open with Live Server**.
-3. The site works offline with its bundled CSS, JavaScript and SVG illustrations. There are no third party libraries to install.
-4. Start at the homepage and follow the AFL Grand Final booking journey.
+## Running the Website
 
-## Implementation and technical rationale
+1. Download the project files and extract the ZIP folder.
+2. Open the folder in Visual Studio Code.
+3. Open `index.html` in your browser or use the Live Server extension.
 
-- `index.html`: semantic HTML sections for the homepage, event details, tickets, reserved seating, summary, confirmation, ballot information, verification, and contact form.
-- `styles.css`: CSS variables based on the Figma palette, CSS Grid and Flexbox layout, responsive breakpoints, keyboard focus styles and reduced motion handling.
-- `script.js`: hash navigation with browser back support, search/filtering, working mobile menu, selected seating category and quantity carried into the summary, and demonstration form validation.
-- `assets/`: **original, self-contained SVG illustrations serving as temporary stand-ins** for the photographic assets used in Figma. The exact Figma photograph exports were not accessible in this build environment. Replace these files with your own permitted event photographs before submission if visual fidelity to Figma is required, updating the `<img src>` paths in `index.html` as needed. **Do not pass off the SVGs as the photographs from the Figma design.**
-- `TESTING_CHECKLIST.md`: manual usability and technical test cases. Complete these honestly on your own machine; do not mark untested browsers as passed.
+## Features
 
-## Intended user journeys
+- Event search and filtering
+- Responsive layout for desktop and mobile
+- AFL Grand Final event details and ticket selection
+- Seven seating categories
+- Booking summary that updates based on the selected category and quantity
+- Information about ticket ballots and queues
+- Demonstration ticket verification and contact forms
 
-### Event booking
+## Technologies Used
 
-Homepage → AFL Grand Final → Find Tickets → Reserved Seating → Category 1–7 → Booking Summary with correct category and quantity → Confirm Selection (demo).
+**HTML:** Used to structure the website and its forms.
 
-### Verification
+**CSS:** Used for the layout, colours, buttons and responsive design.
 
-Homepage → Verify A Ticket → enter *example* event and reference (optionally select a file) → Run Demo Check → explanation that no real ticket was authenticated.
+**JavaScript:** Used for navigation, searching, ticket selection, booking summaries and form validation.
 
-### Other interactions
+The website uses local SVG illustrations for its event imagery.
 
-Search featured events, filter Sports/Concerts, responsive navigation, ballot and queue guidance, contact enquiry form validation.
+## Project Information
 
-## Accessibility and security notes
+This is a university prototype, not an operational Ticketek website. Ticket availability, booking confirmations and verification results are demonstrations only. No real purchases or ticket checks take place.
 
-- Labelled inputs, semantic headings, meaningful links and buttons, keyboard focus ring and image alternative text.
-- JavaScript uses `textContent` rather than injecting form values into HTML.
-- Forms use browser validation; selected files are checked for extension/type and size but **not read or uploaded**. No user data is stored.
-- Colour contrast and responsive layout should be tested in multiple browsers and screen sizes.
+## Figma Design
 
-## GitHub publication (required by assessment brief)
+[View my original Figma prototype](https://www.figma.com/design/go5nzI5KxaRqm29dR52hwK/UED100-Assessment-2---Ticketek-Redesign)
 
-1. Create a new GitHub repository (for example `ued100-ticketek-redesign`).
-2. In VS Code Terminal, run `git init`, `git add .`, `git commit -m "Build responsive Ticketek redesign prototype"`.
-3. Add and test improvements in separate commits where possible, with meaningful messages (e.g. `Improve mobile navigation and form feedback`).
-4. Follow GitHub's instructions to add the remote and push the current branch.
-5. Paste the real repository URL into the Word report and your final assessment submission.
+## Testing
 
-## Submission package
-
-- ZIP: `UED100_Gangur_B_Assessment_2.zip` containing this folder and assets.
-- Word report: `UED100_Gangur_B_Assessment_2.docx` (separate attachment).
-- AI acknowledgement: use the required Torrens template; see `AI_ACKNOWLEDGEMENT_DRAFT.txt` for a factual draft to adapt.
-- Figma design URL: https://www.figma.com/design/go5nzI5KxaRqm29dR52hwK/UED100-Assessment-2---Ticketek-Redesign
-- GitHub repository URL: **TO BE ADDED BY STUDENT**.
-
-## Scope and data disclaimers
-
-The AFL Grand Final event information and seating categories are illustrative. Do not assume ticket availability or current dates; verify with official sources if used outside this student assignment. Ticket checks and contact forms are non-operational demonstrations and do not contact official services.
+The `TESTING_CHECKLIST.md` file contains the tests used to review the website's functionality and responsiveness.
